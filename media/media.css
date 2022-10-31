@@ -1,0 +1,74 @@
+.caja1,
+.caja2,
+.caja3,
+.caja4,
+.caja5,
+.caja6{
+    width: 250px;
+    height: 250px;
+    background-color: gray;
+    border: 2px solid black;
+    font-size: 40px;
+    font-weight: bold;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+/*celular*/
+@media(max-width:576px){
+    .container{
+        flex-direction: column;
+        align-items: center;
+        height: 2000px;
+        justify-content: space-between;
+    }
+    .caja1,.caja2,.caja3,
+    .caja4,.caja5,.caja6{
+        background-color: green;   
+    }
+}
+/*tablet*/
+@media (min-width:576px) and (max-width:1024px){
+    .container{
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 1000px;
+        justify-content: space-between;
+        align-content: space-between;
+    }
+    .caja1,.caja2,.caja3,
+    .caja4,.caja5,.caja6{
+        background-color: violet;   
+    }
+}
+/*portatil*/
+@media (min-width:1025px) and (max-width:1300px){
+    .container{
+        width: 1000px;
+        flex-wrap: wrap;
+        justify-content:space-between;
+        align-content: space-between;
+        height: 700px;
+        margin: 0 auto;
+    }
+    .caja1,.caja2,.caja3,
+    .caja4,.caja5,.caja6{
+        background-color: gold;   
+    }
+}
+/*escritorio*/
+@media (min-width:1301px) and (max-width:1920px){
+    .container{
+        width: 2000px;
+        flex-wrap: wrap;
+        justify-content:space-between;
+        align-content: space-between;
+        height: 400px;
+        margin: 0 auto;
+    }
+    .caja1,.caja2,.caja3,
+    .caja4,.caja5,.caja6{
+        background-color: silver;   
+    }
+}
